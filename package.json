@@ -9,7 +9,8 @@
     "format": "npx prettier --write .",
     "lint": "prettier --check .",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "next": "10.1.3",

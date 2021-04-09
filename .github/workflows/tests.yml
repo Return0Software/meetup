@@ -1,4 +1,4 @@
-name: Unit Tests
+name: tests
 
 on:
   push:
@@ -7,21 +7,21 @@ on:
     branches: [main]
 
 jobs:
-  unitTests:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2
 
-      - name: Setup Node.js 15.x
+      - name: setup node.js 15.x
         uses: actions/setup-node@v1
         with:
           node-version: 15.x
 
-      - name: Run tests
+      - name: run tests
         run: |
           npm ci
-          npm test:ci
+          npm run test:ci
         env:
           CI: true
