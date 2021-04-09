@@ -1,5 +1,9 @@
 # meetup
 
+![lint](https://github.com/Return0Software/meetup/workflows/lint/badge.svg)
+![tests](https://github.com/Return0Software/meetup/workflows/UnitTests/badge.svg)
+[![codecov](https://codecov.io/gh/Return0Software/meetup/branch/master/graph/badge.svg)](https://codecov.io/gh/Return0Software/meetup)
+
 Schedule meetups.
 
 ## setup
