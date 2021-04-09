@@ -1,0 +1,30 @@
+name: coverage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup node.js 15.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
+
+      - name: generate coverage
+        run: |
+          npm ci
+          npm run coverage
+        env:
+          CI: true
+
+      - name: ppload coverage to codecov
+        uses: codecov/codecov-action@v1
